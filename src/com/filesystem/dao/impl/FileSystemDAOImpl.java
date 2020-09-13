@@ -131,10 +131,6 @@ public class FileSystemDAOImpl implements FileSystemDAO {
 	@Override
 	public List<FileObject> getFilesBeforeDate(LocalDate date) throws FileSystemException {
 		
-		List<FileObject> obj_list = fileSystemMap.values().stream().collect(Collectors.toList()) ; 
-		for(FileObject y: obj_list){
-			System.out.println(y.getDateCreated().compareTo(date));
-		}
 		
 		
 		List<FileObject> fileList = fileSystemMap.values().stream()
@@ -157,10 +153,7 @@ public class FileSystemDAOImpl implements FileSystemDAO {
 	@Override
 	public List<FileObject> getFilesAfterDate(LocalDate date) throws FileSystemException {
 		
-		List<FileObject> obj_list = fileSystemMap.values().stream().collect(Collectors.toList()) ; 
-		for(FileObject y: obj_list){
-			System.out.println(y.getDateCreated().compareTo(date));
-		}
+	
 		
 		List<FileObject> fileList = fileSystemMap.values().stream()
 				.filter(s -> s.getDateCreated().compareTo(date)>0)
@@ -208,8 +201,25 @@ public class FileSystemDAOImpl implements FileSystemDAO {
 		}
 		
 	}
-	
-	
+
+
+
+
+	@Override
+	public FileObject updateCreatorName(String fileName, String newCreatorName) throws FileSystemException {
+		
+		if(fileSystemMap.containsKey(fileName)==false) {
+			throw new FileSystemException("There is no file in the directory with the given name") ; 
+		}
+		
+		FileObject currentFile = fileSystemMap.get(fileName) ; 
+		currentFile.setCreatorName(newCreatorName);
+		
+		fileSystemMap.put(fileName, currentFile) ; 
+		
+		return currentFile;
+	}
+
 	
 	
 

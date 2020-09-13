@@ -21,6 +21,8 @@ public interface FileSystemDAO {
 	FileObject getFileByName(String name) throws FileSystemException ; 
 	
 	List<FileObject> getFilesByCreator(String name) throws FileSystemException ; 
+	
+	FileObject updateCreatorName(String fileName, String newCreatorName) throws FileSystemException ; 
 
 
 }

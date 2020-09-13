@@ -12,12 +12,12 @@ public interface FileSystemService {
 	void deleteFile(String fileName) throws FileSystemException ; 
 	
 	List<FileObject> getFiles() throws FileSystemException ; 
-	List<FileObject> getFilesByDate(LocalDate date) throws FileSystemException ; 
+	List<FileObject> getFilesByDate(String date_string) throws FileSystemException ; 
 	List<FileObject> getFileByExtension(String extension) throws FileSystemException ; 
-	List<FileObject> getFilesBeforeDate(LocalDate date) throws FileSystemException ; 
-	List<FileObject> getFilesAfterDate(LocalDate date) throws FileSystemException ; 
+	List<FileObject> getFilesBeforeDate(String date_string) throws FileSystemException ; 
+	List<FileObject> getFilesAfterDate(String date_string) throws FileSystemException ; 
 	FileObject getFileByName(String name) throws FileSystemException ; 
 	List<FileObject> getFilesByCreator(String name) throws FileSystemException ; 
-	
+	FileObject updateCreatorName(String fileName, String newCreatorName) throws FileSystemException ; 
 	
 }
