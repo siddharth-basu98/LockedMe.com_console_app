@@ -18,6 +18,7 @@ public class FileSystemDAOImpl implements FileSystemDAO {
 	
 	private Map<String, FileObject> fileSystemMap = new TreeMap<String, FileObject>() ;
 	private String dir = System.getProperty("user.dir") + "/Files"; 
+	private static int count ; 
 
 	
 	
@@ -39,7 +40,7 @@ public class FileSystemDAOImpl implements FileSystemDAO {
 			System.out.println("File I/O Error occured while creating file in the directory") ; 
 		}
 		
-		
+		file.setFile_id(count++);
 		fileSystemMap.put(file.getName(), file) ; 
 		return file;
 	}
@@ -52,11 +53,7 @@ public class FileSystemDAOImpl implements FileSystemDAO {
 		
 		String file_name = dir+"/" + fileName ; 
 		File toDeleteObj = new File(file_name); 
-		
-//		if(fileSystemMap.containsKey(fileName)==false){
-//			throw new FileSystemException("The entered file name doesn't exists in the directory.") ; 
-//		}
-		
+				
 	 
 		if (toDeleteObj.delete()) { 
 	      System.out.println("Deleted the file: " + fileName);

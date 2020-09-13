@@ -5,11 +5,13 @@ import java.time.LocalDate;
 
 public class FileObject {
 	
-	private String name ; 
+	private String name ;
+	private int file_id ; 
 	private String creatorName ;
 	private LocalDate dateCreated ; 
 	private String extension ; 
 	private String description ; 
+	
 	
 	
 	public String getName() {
@@ -20,6 +22,16 @@ public class FileObject {
 	public void setName(String name) {
 		this.name = name;
 	}
+	
+	public int getFile_id() {
+		return file_id;
+	}
+
+
+	public void setFile_id(int file_id) {
+		this.file_id = file_id;
+	}
+
 	
 	public String getCreatorName() {
 		return creatorName;
@@ -53,14 +65,16 @@ public class FileObject {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	
+
 
 	@Override
 	public String toString() {
-		return "FileObject [name=" + name + ", creatorName=" + creatorName + ", dateCreated=" + dateCreated
-				+ ", extension=" + extension + ", description=" + description + "]";
+		return "FileObject [name=" + name + ", file_id=" + file_id + ", creatorName=" + creatorName + ", dateCreated="
+				+ dateCreated + ", extension=" + extension + ", description=" + description + "]";
 	}
+	
 
+	
 
 
 	
