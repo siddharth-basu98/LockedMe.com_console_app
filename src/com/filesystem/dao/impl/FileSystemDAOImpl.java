@@ -37,7 +37,7 @@ public class FileSystemDAOImpl implements FileSystemDAO {
 			f.createNewFile() ; 
 		}
 		catch(Exception ex){
-			System.out.println("File I/O Error occured while creating file in the directory") ; 
+			throw new FileSystemException("File I/O Error occured while creating file in the directory") ; 
 		}
 		
 		file.setFile_id(count++);

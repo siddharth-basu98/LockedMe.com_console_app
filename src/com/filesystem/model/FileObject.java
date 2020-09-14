@@ -69,8 +69,8 @@ public class FileObject {
 
 	@Override
 	public String toString() {
-		return "FileObject [name=" + name + ", file_id=" + file_id + ", creatorName=" + creatorName + ", dateCreated="
-				+ dateCreated + ", extension=" + extension + ", description=" + description + "]";
+		return "\nname=" + name + "\nfile_id=" + file_id + "\ncreatorName=" + creatorName + "\ndateCreated="
+				+ dateCreated + "\nextension=" + extension + "\ndescription=" + description + "";
 	}
 	
 

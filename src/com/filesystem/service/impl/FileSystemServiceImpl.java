@@ -72,6 +72,9 @@ public class FileSystemServiceImpl implements FileSystemService {
 			throw new FileSystemException("The file name must have an extension like for example index.html, data.pdf etc..") ; 
 
 		}
+		else if(isValidName(file.getCreatorName())==false) {
+			throw new FileSystemException("The file creator name is invalid having a length 0") ; 
+		}
 		else {
 			file.setName(file.getName().trim());
 			return dao.createFile(file) ; 

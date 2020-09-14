@@ -15,6 +15,7 @@ public class FileSystemMain {
 		
 		
 		System.out.println("Welcome to the LockedMe.com Console App V1.0");
+		System.out.println("Developed by Siddharth Basu");
 		System.out.println("---------------------------------------------");
 		
 		
@@ -82,7 +83,7 @@ public class FileSystemMain {
 					System.out.println();
 					System.out.println();
 					
-					System.out.println("Please Enter your appropriate choice(1-9)");
+					System.out.println("Please Enter your appropriate choice(1-11)");
 					
 					
 					try {
@@ -122,7 +123,7 @@ public class FileSystemMain {
 						
 						try {
 							fileObj=service.createFile(fileObj) ; 
-							System.out.println("File created with details "+ fileObj);
+							System.out.println("\n \nFile created with details "+ fileObj);
 						} catch (FileSystemException e) {
 							System.out.println(e.getMessage());
 						}
@@ -137,7 +138,7 @@ public class FileSystemMain {
 						System.out.println();
 
 						
-						System.out.println("Enter File Name you want to delete below.....");
+						System.out.println("\n\nEnter File Name you want to delete below.....");
 						file_name = scanner.nextLine() ;
 						
 						try {
@@ -156,7 +157,7 @@ public class FileSystemMain {
 						System.out.println();
 						System.out.println();
 
-						System.out.println("You chose to see the list of files in the directory " + System.getProperty("user.dir") + "/Files");
+						System.out.println("\n\nYou chose to see the list of files in the directory " + System.getProperty("user.dir") + "/Files");
 							
 						try {
 							List<FileObject> filesInDirectory = service.getFiles();
@@ -177,7 +178,7 @@ public class FileSystemMain {
 						System.out.println();
 						System.out.println();
 
-						System.out.println("Please enter the date strictly in the following format YYYY-MM-DD");
+						System.out.println("\n\nPlease enter the date strictly in the following format YYYY-MM-DD");
 					    dateString = scanner.nextLine();
 						
 					    try {
@@ -202,7 +203,7 @@ public class FileSystemMain {
 						System.out.println();
 						System.out.println();
 
-						System.out.println("Please Enter the date strictly in the following format YYYY-MM-DD");
+						System.out.println("\n\nPlease Enter the date strictly in the following format YYYY-MM-DD");
 					    dateString = scanner.nextLine();
 						
 					    try {
@@ -226,7 +227,7 @@ public class FileSystemMain {
 						System.out.println();
 						System.out.println();
 
-						System.out.println("Please Enter the date strictly in the following format YYYY-MM-DD");
+						System.out.println("\n\nPlease Enter the date strictly in the following format YYYY-MM-DD");
 					    dateString = scanner.nextLine();
 						
 					    try {
@@ -249,7 +250,7 @@ public class FileSystemMain {
 						System.out.println();
 						System.out.println();
 
-						System.out.println("Enter Extension name without the '.' (ex. html, pdf) you want the list of files for.....");
+						System.out.println("\n\nEnter Extension name without the '.' (ex. html, pdf) you want the list of files for.....");
 						String extension_name = scanner.nextLine() ;
 						
 						try {
@@ -272,7 +273,7 @@ public class FileSystemMain {
 						System.out.println();
 						System.out.println();
 
-						System.out.println("Enter the creator name whose created files you want to check.....");
+						System.out.println("\n\nEnter the creator name whose created files you want to check.....");
 						String creator_name = scanner.nextLine() ;
 						
 						try {
@@ -294,7 +295,7 @@ public class FileSystemMain {
 						System.out.println();
 						System.out.println();
 
-						System.out.println("Enter the file name whose details you want to check.....");
+						System.out.println("\n\nEnter the file name whose details you want to check.....");
 						file_name = scanner.nextLine() ;
 						
 						try {
@@ -312,10 +313,10 @@ public class FileSystemMain {
 						System.out.println();
 						System.out.println();
 						
-						System.out.println("Enter the file name whose details you want to check.....");
+						System.out.println("\n\nEnter the file name whose details you want to check.....");
 						file_name = scanner.nextLine() ;
 						
-						System.out.println("Enter the updated creator name for this file.....");
+						System.out.println("\nEnter the updated creator name for this file.....");
 						String new_creator_name = scanner.nextLine() ;
 						
 						try {
@@ -330,7 +331,7 @@ public class FileSystemMain {
 						
 						System.out.println();
 
-						System.out.println("Thank you for using our system. Taking you back to the main menu") ;
+						System.out.println("\nThank you for using our system. Taking you back to the main menu") ;
 						System.out.println("################################################################") ; 
 						System.out.println();
 						System.out.println();
@@ -341,7 +342,7 @@ public class FileSystemMain {
 					
 					
 					default:
-						System.out.println("Entered choice is invalid it should be numbers between 1-11 only");
+						System.out.println("\n\nEntered choice is invalid it should be numbers between 1-11 only");
 						break;
 					}
 
