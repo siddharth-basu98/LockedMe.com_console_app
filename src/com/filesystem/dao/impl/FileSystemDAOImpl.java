@@ -51,6 +51,10 @@ public class FileSystemDAOImpl implements FileSystemDAO {
 	@Override
 	public void deleteFile(String fileName) throws FileSystemException {
 		
+		if(fileSystemMap.containsKey(fileName)==false) {
+			throw new FileSystemException("The entered file name doesn't exist in the directory") ; 
+		}
+		
 		String file_name = dir+"/" + fileName ; 
 		File toDeleteObj = new File(file_name); 
 				
